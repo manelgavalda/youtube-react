@@ -5,6 +5,7 @@ const app = express();
 
 app.use(express.static(__dirname));
 
+// To make route still work on refresh
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'index.html'))
 });
